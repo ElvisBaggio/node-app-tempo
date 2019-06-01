@@ -14,6 +14,9 @@ const forecast = (latitude, longitude, callback) => {
                 summary: body.daily.data[0].summary,
                 temperature: body.currently.temperature,
                 precipProbability: body.currently.precipProbability,
+                humidity: body.currently.humidity,
+                pressure: body.currently.pressure,
+                windSpeed:  body.currently.windSpeed,
                 msg: body.daily.data[0].summary+ ' A temperatura atual é ' + body.currently.temperature +" . A possibilidade de chuva é de "
                 + body.currently.precipProbability + '%'
             })
